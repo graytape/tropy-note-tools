@@ -1,0 +1,11 @@
+{
+  "name": "tropy-note-tools",
+  "productName": "Note Tools",
+  "version": "1.4.0",
+  "description": "Find across every note of a Tropy item, with automatic photo and note navigation.",
+  "main": "index.js",
+  "license": "MIT",
+  "hooks": {},
+  "options": [],
+  "source": "local"
+}

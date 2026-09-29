@@ -1,0 +1,30 @@
+/* Inherit Tropy's theme while keeping match colors legible in light and dark UI. */
+.nt-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:5px; padding:5px 8px; flex:0 0 auto; min-height:0; color:inherit; background:inherit; border-bottom:1px solid #8886; font:12px system-ui,sans-serif; }
+.nt-toolbar button,.nt-toolbar input[type=search] { font:inherit; color:inherit; background:transparent; border:1px solid #8888; border-radius:4px; padding:3px 7px; }
+.nt-toolbar button { min-width:26px; cursor:pointer; }
+.nt-toolbar button:hover:not(:disabled) { background:#8883; }
+.nt-toolbar button:disabled { opacity:.45; cursor:default; }
+.nt-toolbar :focus-visible { outline:2px solid #488cde; outline-offset:1px; }
+.nt-panel { flex:1 1 100%; min-width:0; }
+.nt-toolbar[hidden],.nt-panel[hidden],.nt-toolbar button[hidden] { display:none; }
+.nt-search { display:flex; align-items:center; flex-wrap:wrap; gap:5px; }
+.nt-search input[type=search] { flex:1 1 140px; min-width:70px; }
+.nt-search output { min-width:44px; text-align:center; font-variant-numeric:tabular-nums; }
+.nt-toolbar label { display:inline-flex; align-items:center; gap:3px; margin:0; }
+.nt-status { padding:5px 1px; font-size:11px; opacity:.8; }
+.nt-results { max-height:160px; overflow:auto; overscroll-behavior:contain; }
+.nt-results:empty { display:none; }
+.nt-results .nt-result { display:block; width:100%; min-width:0; text-align:start; border:0; border-radius:3px; padding:5px 7px; }
+.nt-results .nt-result[aria-current=true] { background:#488cde28; box-shadow:inset 3px 0 #488cde; }
+.nt-result-label { display:block; font-size:10px; opacity:.75; margin-bottom:2px; }
+.nt-snippet { display:block; overflow-wrap:anywhere; line-height:1.4; }
+.nt-snippet mark { background:#f4d35e; color:#171717; border-radius:2px; }
+/* A filled blue surface, strong border and checkmark distinguish active modes
+   independently of the host theme and without relying on color alone. */
+.nt-toolbar button.nt-toggle { min-width:43px; font-weight:650; border:1px solid #888b; }
+.nt-toolbar button.nt-toggle::after { content:' '; display:inline-block; width:12px; margin-left:3px; }
+.nt-toolbar button.nt-toggle[aria-pressed=true],
+.nt-toolbar button.nt-toggle[aria-pressed=true]:hover { color:#fff; background:#175cd3; border-color:#8ab4ff; box-shadow:inset 0 0 0 1px #fff6; }
+.nt-toolbar button.nt-toggle[aria-pressed=true]::after { content:'✓'; }
+.nt-status[hidden] { display:none; }
+.nt-toolbar input[aria-invalid=true] { border:2px solid #d84747; }
